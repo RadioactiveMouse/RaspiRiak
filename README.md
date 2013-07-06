@@ -2,11 +2,19 @@
 
 Script to make it easy to install Riak on the Raspberry Pi. This is mainly useful for multi-machine deployments as it takes quite a while to compile.
 
+## Download
+
+Run the following to download the file to your machine:
+	curl https://raw.github.com/RadioactiveMouse/RaspiRiak/master/riak.sh
+
+You may also need to change the permissions of the script using :
+	sudo chmod +x riak.sh
+
 ## Usage
 
 Running the following command should install Riak onto your raspberry pi
 
-	./riak.sh
+	sudo ./riak.sh
 
 ## Notes
 
