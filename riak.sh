@@ -14,7 +14,9 @@ git clone -b riak-1.3.2 https://github.com/basho/riak.git
 
 # Make the target
 echo "Installing Riak"
-time sudo make riak/rel
+cd riak/
+time sudo make rel
+cd ..
 
 # append riak to the .bashrc
 echo "Updating bashrc to make it easier to run Riak. Backup stored as .oldbashrc"
@@ -23,7 +25,7 @@ echo "export PATH=$PATH:$HOME/riak/rel/riak/bin/riak" >> $HOME/.bashrc
 
 # start riak
 echo "Starting Riak"
-./riak/rel/riak/bin/riak start
+sudo ./riak/rel/riak/bin/riak start
 
 # check to see if riak is up
 echo "Pinging Riak"
