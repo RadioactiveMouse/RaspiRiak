@@ -21,7 +21,7 @@ cd ..
 # append riak to the .bashrc
 echo "Updating bashrc to make it easier to run Riak. Backup stored as .oldbashrc"
 cp $HOME/.bashrc $HOME/.oldbashrc
-echo "export PATH=$PATH:$HOME/riak/rel/riak/bin/riak" >> $HOME/.bashrc
+echo "export PATH=$PATH:$HOME/riak/rel/riak/bin" >> $HOME/.bashrc
 
 # start riak
 echo "Starting Riak"
