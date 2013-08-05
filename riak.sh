@@ -6,7 +6,7 @@ sudo apt-get -y update
 sudo apt-get -y dist-upgrade
 
 # Install dependencies
-sudo apt-get install -y erlang git
+sudo apt-get install -y erlang git curl
 
 # Clone latest stabl release of riak via https
 echo "Cloning Riak"
@@ -29,7 +29,9 @@ sudo ./riak/rel/riak/bin/riak start
 
 # check to see if riak is up
 echo "Pinging Riak"
+# Give the riak node time to start up
+sleep 5
 echo "Status is : "
-curl http://localhost:8098/ping
+curl http://127.0.0.1:8098/ping
 
 echo "If the line above says OK then the Riak has been installed successfully and is running."
