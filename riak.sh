@@ -10,7 +10,7 @@ sudo apt-get install -y erlang git curl
 
 # Clone latest stable release of riak via https
 echo "Cloning 1.4.0 Riak"
-git clone -b riak-1.4 https://github.com/basho/riak.git
+git clone -b 1.4 https://github.com/basho/riak.git
 
 # Make the target
 echo "Installing Riak"
