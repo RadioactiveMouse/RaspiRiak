@@ -8,7 +8,7 @@ sudo apt-get -y dist-upgrade
 # Install dependencies
 sudo apt-get install -y erlang git curl
 
-# Clone latest stabl release of riak via https
+# Clone latest stable release of riak via https
 echo "Cloning Riak"
 git clone https://github.com/basho/riak.git
 
@@ -19,13 +19,14 @@ time sudo make rel
 cd ..
 
 # append riak to the .bashrc
-echo "Updating bashrc to make it easier to run Riak. Backup stored as .oldbashrc"
-cp $HOME/.bashrc $HOME/.oldbashrc
-echo "export PATH=$PATH:$HOME/riak/rel/riak/bin" >> $HOME/.bashrc
+echo "Updating .profile to make it easier to run Riak. Backup stored as .oldprofile"
+cp $HOME/.profile $HOME/.oldprofile
+echo "export PATH=$PATH:$HOME/riak/rel/riak/bin" >> $HOME/.profile
+source ~/.profile
 
 # start riak
 echo "Starting Riak"
-sudo ./riak/rel/riak/bin/riak start
+sudo riak start
 
 # check to see if riak is up
 echo "Pinging Riak"
